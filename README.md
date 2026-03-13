@@ -6,6 +6,13 @@
 ```bash
 # Install globally — works in every project
 cp -r .claude/agents/* ~/.claude/agents/
+cp -r .claude/commands/* ~/.claude/commands/
+```
+
+Not sure where to start? Run this first:
+
+```
+/hire-team
 ```
 
 ---
@@ -52,12 +59,6 @@ cp -r agents/.claude/agents/* ~/.claude/agents/
 **Project install** — scoped to one repo:
 ```bash
 cp -r agents/.claude/agents/* your-project/.claude/agents/
-```
-
-**Hire the full team at once:**
-```bash
-cp -r agents/.claude/commands/* ~/.claude/commands/
-# Then use: /hire-team
 ```
 
 ---
