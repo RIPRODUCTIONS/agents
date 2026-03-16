@@ -51,6 +51,7 @@ navox-labs/agents/
 │
 ├── CLAUDE.md                          ← this file
 ├── README.md                          ← public-facing documentation
+├── GETTING-STARTED.md                 ← junior engineer onboarding guide
 ├── LICENSE                            ← MIT license
 │
 ├── .claude/
@@ -59,10 +60,17 @@ navox-labs/agents/
 │   │   ├── fullstack.md               ← /fullstack
 │   │   ├── ux.md                      ← /ux
 │   │   ├── qa.md                      ← /qa
-│   │   └── security.md                ← /security
+│   │   ├── security.md                ← /security
+│   │   └── local-review.md            ← human checkpoint between build and QA
 │   │
-│   └── commands/                      ← slash commands (orchestration)
-│       └── hire-team.md               ← /hire-team (runs all 5 agents)
+│   ├── commands/                      ← slash commands (orchestration)
+│   │   ├── hire-team.md               ← /hire-team (runs all 5 agents)
+│   │   └── agency-run.md              ← /agency-run (full team orchestrator)
+│   │
+│   ├── memory/                        ← per-agent memory files (created at runtime)
+│   │   └── [agent].md
+│   │
+│   └── project-memory.md             ← shared project memory (created at runtime)
 │
 └── docs/
     ├── modes.md                       ← all modes for all agents explained
@@ -107,7 +115,9 @@ description: One sentence. What this agent does and when Claude should load it a
 | ux.md | `ux` | `/ux` |
 | qa.md | `qa` | `/qa` |
 | security.md | `security` | `/security` |
+| local-review.md | `local-review` | invoked by agency-run between BUILD and QA |
 | hire-team.md | `hire-team` | `/hire-team` |
+| agency-run.md | `agency-run` | `/agency-run` |
 
 ---
 
@@ -146,6 +156,18 @@ The README is the public landing page. Keep it sharp.
 
 ---
 
+## GETTING-STARTED.md rules
+
+This file is written for junior engineers who have never worked in a team before.
+
+- Language must be plain English — no assumed knowledge
+- Every agent must be listed with a real-world job equivalent
+- The handoff chain must match `docs/handoff-chain.md` exactly
+- local-review must be included with its three responses: LGTM, FEEDBACK, STOP
+- The glossary must stay current — add any new terms agents introduce
+
+---
+
 ## How to add a new agent
 
 1. Create `.claude/agents/[agent-name].md`
@@ -155,6 +177,7 @@ The README is the public landing page. Keep it sharp.
 5. Add the agent to `docs/modes.md`
 6. Update `docs/handoff-chain.md` if it changes the chain
 7. Update `.claude/commands/hire-team.md` if it joins the default team
+8. Update `GETTING-STARTED.md` if the new agent affects the onboarding flow
 
 ---
 
@@ -172,10 +195,14 @@ The README is the public landing page. Keep it sharp.
 
 Before committing any changes, verify:
 
-- [ ] All 5 agent files exist in `.claude/agents/`
+- [ ] All 6 agent files exist in `.claude/agents/`
 - [ ] All agent files have valid frontmatter (`name` + `description`)
 - [ ] `hire-team.md` exists in `.claude/commands/`
+- [ ] `agency-run.md` exists in `.claude/commands/`
+- [ ] `local-review.md` exists in `.claude/agents/`
+- [ ] `GETTING-STARTED.md` exists in repo root
 - [ ] All 4 docs files exist and are non-empty
+- [ ] `docs/handoff-chain.md` includes local-review in the chain
 - [ ] README.md team table matches the actual agent files
 - [ ] No file outside this structure was created
 - [ ] No binary, config, or dependency file was added
@@ -183,10 +210,10 @@ Before committing any changes, verify:
 Run this to verify agent files are present:
 ```bash
 ls .claude/agents/
-# Expected: architect.md  fullstack.md  qa.md  security.md  ux.md
+# Expected: architect.md  fullstack.md  local-review.md  qa.md  security.md  ux.md
 
 ls .claude/commands/
-# Expected: hire-team.md
+# Expected: agency-run.md  hire-team.md
 
 ls docs/
 # Expected: auth-ownership.md  handoff-chain.md  install.md  modes.md
