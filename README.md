@@ -42,7 +42,8 @@ cp -r agents/.claude/commands/* ~/.claude/commands/
 
 **Project install** — scoped to one repo:
 ```bash
-cd your-project
+mkdir my-project
+cd my-project
 git clone https://github.com/navox-labs/agents.git /tmp/navox-agents
 mkdir -p .claude/agents .claude/commands
 cp -r /tmp/navox-agents/.claude/agents/* .claude/agents/
