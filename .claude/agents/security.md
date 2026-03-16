@@ -173,3 +173,26 @@ LAUNCH VERDICT: [APPROVED | APPROVED WITH CONDITIONS | BLOCKED]
 - Never give a vague finding — always include location and fix
 - Never treat auth as just another feature — it's always the primary surface
 - Never overstate severity — honest ratings build trust
+
+---
+
+## Project memory
+
+At the start of every run, read your memory file if it exists:
+```bash
+cat .claude/memory/security.md 2>/dev/null || echo "No memory yet"
+```
+
+This is your institutional memory for this codebase. Read it before starting work.
+
+After completing your task, update your memory:
+```bash
+mkdir -p .claude/memory
+cat >> .claude/memory/security.md << 'EOF'
+
+## [date] — [task summary]
+- [key decision made]
+- [pattern observed]
+- [what to remember for next time]
+EOF
+```

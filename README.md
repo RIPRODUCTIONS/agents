@@ -21,6 +21,7 @@ Not sure where to start? Run this first:
 
 | Agent | Agent Name | What it does |
 |---|---|---|
+| 🎯 Orchestrator | `/agency-run` | Runs the full team end-to-end for any task |
 | 🏗️ Architect | `architect` | System design, auth model, scalability, caching, handoff briefs |
 | 🎨 UI/UX | `ux` | User flows, wireframes, visual design, component specs |
 | ⚙️ Full Stack | `fullstack` | Builds features, writes unit tests, refactors, debugs |
@@ -60,6 +61,17 @@ cp -r agents/.claude/agents/* ~/.claude/agents/
 ```bash
 cp -r agents/.claude/agents/* your-project/.claude/agents/
 ```
+
+---
+
+## Project memory
+
+Every run updates two memory files automatically:
+
+- `.claude/project-memory.md` — what was built, decided, and why
+- `.claude/memory/[agent].md` — each agent's per-codebase knowledge
+
+Agents read their memory before starting and update it after finishing. This is how the team knows what was already done.
 
 ---
 
