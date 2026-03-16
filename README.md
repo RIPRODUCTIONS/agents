@@ -51,7 +51,12 @@ cp -r /tmp/navox-agents/.claude/commands/* .claude/commands/
 rm -rf /tmp/navox-agents
 ```
 
-Then open Claude Code and run:
+Then open Claude Code:
+```bash
+claude
+```
+
+And run:
 ```
 /agency-run Build a to-do app with user login. Use Next.js and a database.
 ```
