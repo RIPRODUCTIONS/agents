@@ -4,6 +4,14 @@ Every agent supports a `PLAN` mode as its entry point for when you're unsure wha
 
 ---
 
+## Orchestrator (`/agency-run`)
+
+| Mode | Description |
+|---|---|
+| **RUN** | Execute a full team handoff chain for a task, with memory read/write |
+
+---
+
 ## Architect (`/architect`)
 
 | Mode | Description |

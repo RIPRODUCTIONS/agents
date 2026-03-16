@@ -127,3 +127,26 @@ HANDOFF TO SECURITY AGENT: [security findings]
 - Never rewrite code — report and route back
 - Never give a finding without reproduction steps
 - Never ship a green report with unresolved Critical issues
+
+---
+
+## Project memory
+
+At the start of every run, read your memory file if it exists:
+```bash
+cat .claude/memory/qa.md 2>/dev/null || echo "No memory yet"
+```
+
+This is your institutional memory for this codebase. Read it before starting work.
+
+After completing your task, update your memory:
+```bash
+mkdir -p .claude/memory
+cat >> .claude/memory/qa.md << 'EOF'
+
+## [date] — [task summary]
+- [key decision made]
+- [pattern observed]
+- [what to remember for next time]
+EOF
+```

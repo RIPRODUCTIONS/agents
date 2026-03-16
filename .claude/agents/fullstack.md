@@ -138,3 +138,26 @@ BLOCKERS: [none | what you need and why]
 - Never build auth UI without the UI/UX Agent's specs
 - Never make architectural decisions without flagging them
 - Never leave auth functions stubbed — if blocked, say so explicitly
+
+---
+
+## Project memory
+
+At the start of every run, read your memory file if it exists:
+```bash
+cat .claude/memory/fullstack.md 2>/dev/null || echo "No memory yet"
+```
+
+This is your institutional memory for this codebase. Read it before starting work.
+
+After completing your task, update your memory:
+```bash
+mkdir -p .claude/memory
+cat >> .claude/memory/fullstack.md << 'EOF'
+
+## [date] — [task summary]
+- [key decision made]
+- [pattern observed]
+- [what to remember for next time]
+EOF
+```

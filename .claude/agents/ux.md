@@ -139,3 +139,26 @@ HANDOFF TO FULL STACK AGENT:
 - Never produce a design that requires the Full Stack Agent to make UX decisions
 - Never skip mobile — if it breaks on small screens, it's not done
 - Never design in isolation — always reference the Architect's system and auth model
+
+---
+
+## Project memory
+
+At the start of every run, read your memory file if it exists:
+```bash
+cat .claude/memory/ux.md 2>/dev/null || echo "No memory yet"
+```
+
+This is your institutional memory for this codebase. Read it before starting work.
+
+After completing your task, update your memory:
+```bash
+mkdir -p .claude/memory
+cat >> .claude/memory/ux.md << 'EOF'
+
+## [date] — [task summary]
+- [key decision made]
+- [pattern observed]
+- [what to remember for next time]
+EOF
+```

@@ -25,6 +25,23 @@ This repo is open source under MIT. It lives at `github.com/navox-labs/agents`.
 
 ---
 
+## Commands
+
+| Command | What it does |
+|---|---|
+| `/hire-team` | Onboard the full team, show handoff order |
+| `/agency-run <task>` | Orchestrate the full team to complete a task end-to-end |
+
+## Project memory
+
+The team's institutional memory lives in two places:
+- `.claude/project-memory.md` — shared across all agents, updated after every run
+- `.claude/memory/[agent].md` — per-agent memory, updated after each agent run
+
+Never delete these files. They are the team's knowledge base.
+
+---
+
 ## Exact folder structure
 
 This is the required structure. Do not deviate.
