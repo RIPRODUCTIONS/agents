@@ -198,6 +198,19 @@ The chain never auto-continues past this point. You are the only one who can app
 
 ---
 
+## Parallel execution
+
+The handoff chain has two parallel stages. Instead of running agents one at a time, spawn them as concurrent subagents — each in its own context window.
+
+| Stage | Agents | When |
+|---|---|---|
+| After Architect DESIGN | UX (FLOW → SPEC) + Security (DESIGN-REVIEW) | Before any code is written |
+| After Local Review LGTM | QA (TEST-RUN) + Security (CODE-AUDIT) | Before fixes and launch audit |
+
+See the full guide with example prompts: **[docs/parallel-execution.md](docs/parallel-execution.md)**
+
+---
+
 ## Project memory
 
 Every run updates two memory files automatically:
