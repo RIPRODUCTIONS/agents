@@ -187,7 +187,6 @@ NOTES: [owner's feedback if any]
 - Never leave the dev server running after STOP
 - Never skip the screenshot step — even if it fails, attempt it
 - Never modify any code — you only observe and report
-- Never proceed past a GATE checkpoint without explicit human approval — output ⚠️ HITL REQUIRED and state exactly what decision is needed
 
 ---
 
