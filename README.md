@@ -42,25 +42,14 @@ cp -r agents/.claude/commands/* .claude/commands/
 Open Claude Code in any project folder and run:
 
 ```
-/agency-run Build a SaaS app with user auth, team billing, and an admin dashboard
+/agency-run Build a {browser-based} {Cookie Clicker game}
+with {Atari pixel art} vibes where {crabs eat cookies}.
+No authentication. No backend. Single HTML file,
+runs in any browser. Make it {addictive} and {funny}.
 ```
 
-That's it. The full team runs automatically.
-
----
-
-## The team
-
-| | Agent | What they do |
-|---|---|---|
-| 🏗️ | **Architect** | Designs the system. Picks the stack. Defines auth. |
-| 🎨 | **UI/UX** | Maps user flows. Specs every screen and state. |
-| ⚙️ | **Full Stack** | Builds it. Tests it. Ships clean code. |
-| 🚀 | **DevOps** | CI/CD. Docker. Deploys. Secrets never touch code. |
-| 🧪 | **QA** | Finds every bug. Auth flows get extra scrutiny. |
-| 🔐 | **Security** | Audits everything. Nothing launches without a verdict. |
-
-Use one agent directly: `architect DIAGNOSE`, `security LAUNCH-AUDIT`, `qa PLAN`
+Replace the `{variables}` with your own idea.
+This is exactly how we built [nom.sh](https://github.com/navox-labs/nom) in 7 minutes.
 
 ---
 
@@ -127,6 +116,21 @@ flowchart TD
 
 ---
 
+## The team
+
+| | Agent | What they do |
+|---|---|---|
+| 🏗️ | **Architect** | Designs the system. Picks the stack. Defines auth. |
+| 🎨 | **UI/UX** | Maps user flows. Specs every screen and state. |
+| ⚙️ | **Full Stack** | Builds it. Tests it. Ships clean code. |
+| 🚀 | **DevOps** | CI/CD. Docker. Deploys. Secrets never touch code. |
+| 🧪 | **QA** | Finds every bug. Auth flows get extra scrutiny. |
+| 🔐 | **Security** | Audits everything. Nothing launches without a verdict. |
+
+Use one agent directly: `architect DIAGNOSE`, `security LAUNCH-AUDIT`, `qa PLAN`
+
+---
+
 ## You stay in control
 
 1. Agents pause at every gate and wait for your approval
@@ -137,14 +141,15 @@ Full guide: [docs/hitl.md](docs/hitl.md)
 
 ---
 
-## Stack templates
+## Start faster
 
-Drop a pre-built `CLAUDE.md` into your project so agents know your stack immediately:
+Tell the agents your stack once — they remember it every session.
 
 ```bash
-cp templates/nextjs.CLAUDE.md your-project/CLAUDE.md     # Next.js 15 + Prisma + Supabase Auth
-cp templates/node-api.CLAUDE.md your-project/CLAUDE.md    # Express + JWT + Redis + Railway
-cp templates/rails.CLAUDE.md your-project/CLAUDE.md       # Rails 8 + Devise + Sidekiq + Render
+# Pick your stack
+cp agents/templates/nextjs.CLAUDE.md ./CLAUDE.md
+cp agents/templates/node-api.CLAUDE.md ./CLAUDE.md
+cp agents/templates/rails.CLAUDE.md ./CLAUDE.md
 ```
 
 ---
