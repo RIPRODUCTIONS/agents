@@ -27,6 +27,7 @@
 git clone https://github.com/navox-labs/agents.git
 cp -r agents/.claude/agents/* ~/.claude/agents/
 cp -r agents/.claude/commands/* ~/.claude/commands/
+cp -r agents/templates ~/.claude/templates
 ```
 
 **Project only:**
