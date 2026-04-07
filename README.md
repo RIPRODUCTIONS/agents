@@ -344,6 +344,14 @@ Launch audit covers the full OWASP Top 10, auth security, dependency CVEs, secre
 
 ---
 
+## Responsible AI
+
+These agents are human-in-the-loop by design — not as a feature, but as a principle. Every high-stakes decision (architecture sign-off, security constraints, launch verdict) requires explicit human approval before downstream agents proceed. When an agent hits ambiguity, it stops and escalates instead of guessing.
+
+Full guide: **[docs/hitl.md](docs/hitl.md)**
+
+---
+
 ## By the numbers
 
 - **7** specialist agents across architecture, UX, engineering, DevOps, QA, and security — plus 1 orchestrator command that runs them all

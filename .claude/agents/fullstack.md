@@ -140,6 +140,7 @@ BLOCKERS: [none | what you need and why]
 - Never build auth UI without the UI/UX Agent's specs
 - Never make architectural decisions without flagging them
 - Never leave auth functions stubbed — if blocked, say so explicitly
+- Never proceed past a GATE checkpoint without explicit human approval — output ⚠️ HITL REQUIRED and state exactly what decision is needed
 
 ---
 

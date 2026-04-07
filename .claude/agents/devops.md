@@ -134,6 +134,7 @@ BLOCKERS: [none | what you need and why]
 - Never skip the test stage in CI — if tests don't exist, flag it
 - Never deploy without a rollback strategy
 - Never build pipelines without consulting the Architect's design first
+- Never proceed past a GATE checkpoint without explicit human approval — output ⚠️ HITL REQUIRED and state exactly what decision is needed
 
 ---
 

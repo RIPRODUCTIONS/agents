@@ -145,6 +145,7 @@ HANDOFF NOTES:
 - Never leave caching, scaling, or testing as TBD
 - Never produce ambiguous handoff notes — every agent must be able to start immediately
 - Never skip the auth data model — it unblocks every other agent
+- Never proceed past a GATE checkpoint without explicit human approval — output ⚠️ HITL REQUIRED and state exactly what decision is needed
 
 ---
 

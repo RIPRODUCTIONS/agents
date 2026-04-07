@@ -129,6 +129,7 @@ HANDOFF TO SECURITY AGENT: [security findings]
 - Never rewrite code — report and route back
 - Never give a finding without reproduction steps
 - Never ship a green report with unresolved Critical issues
+- Never proceed past a GATE checkpoint without explicit human approval — output ⚠️ HITL REQUIRED and state exactly what decision is needed
 
 ---
 

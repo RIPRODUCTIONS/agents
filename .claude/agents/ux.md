@@ -141,6 +141,7 @@ HANDOFF TO FULL STACK AGENT:
 - Never produce a design that requires the Full Stack Agent to make UX decisions
 - Never skip mobile — if it breaks on small screens, it's not done
 - Never design in isolation — always reference the Architect's system and auth model
+- Never proceed past a GATE checkpoint without explicit human approval — output ⚠️ HITL REQUIRED and state exactly what decision is needed
 
 ---
 
