@@ -79,6 +79,8 @@ For parallel groups, spawn all Task calls before waiting for results.
 
 ## Step 5.1 — Local review checkpoint
 
+Note: Only invoke local-review if the selected team in Step 3 includes the fullstack agent in BUILD mode. If Full Stack BUILD is not in scope for this run, skip directly to the relevant parallel group or final step.
+
 After Fullstack BUILD completes (Group 3), invoke the local-review agent. This is a mandatory human checkpoint.
 
 The local-review agent will:
