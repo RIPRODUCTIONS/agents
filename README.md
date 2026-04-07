@@ -16,7 +16,7 @@
 > 1,330 lines. Zero dependencies. 6 bugs caught by QA.
 > [🦀 Play nom.sh →](https://github.com/navox-labs/nom)
 
-![Agents building nom.sh](assets/demo.gif)
+> 🎬 Demo GIF coming soon — [watch the nom.sh build on GitHub](https://github.com/navox-labs/nom)
 
 ---
 
@@ -137,20 +137,31 @@ Use one agent directly: `architect DIAGNOSE`, `security LAUNCH-AUDIT`, `qa PLAN`
 2. Nothing destructive runs without your explicit sign-off
 3. You can redirect, reject, or stop at any point
 
+> Agents stop. They wait. You decide. Then they continue.
+
 Full guide: [docs/hitl.md](docs/hitl.md)
 
 ---
 
 ## Start faster
 
-Tell the agents your stack once — they remember it every session.
+First time using Navox Agents on a new project?
+Tell the agents your stack once — they'll know it every session.
+
+After installing the agents globally, run this from inside your project folder:
 
 ```bash
-# Pick your stack
-cp agents/templates/nextjs.CLAUDE.md ./CLAUDE.md
-cp agents/templates/node-api.CLAUDE.md ./CLAUDE.md
-cp agents/templates/rails.CLAUDE.md ./CLAUDE.md
+# Next.js + TypeScript + Tailwind + Supabase
+cp ~/.claude/templates/nextjs.CLAUDE.md ./CLAUDE.md
+
+# Node.js + Express + JWT + Redis
+cp ~/.claude/templates/node-api.CLAUDE.md ./CLAUDE.md
+
+# Rails 8 + Devise + Sidekiq
+cp ~/.claude/templates/rails.CLAUDE.md ./CLAUDE.md
 ```
+
+Pick one. The agents read it automatically when Claude Code opens.
 
 ---
 
