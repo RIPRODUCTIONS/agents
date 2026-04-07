@@ -350,9 +350,29 @@ These agents are independent. You don't need the full team.
 
 ---
 
+## Stack Templates
+
+Drop a pre-built `CLAUDE.md` into your project so agents understand your stack from the first session.
+
+| Template | Stack | File |
+|---|---|---|
+| **Next.js** | Next.js 15, TypeScript, Tailwind, PostgreSQL, Prisma, Supabase Auth, Redis, Vercel | [`templates/nextjs.CLAUDE.md`](templates/nextjs.CLAUDE.md) |
+| **Node API** | Node.js, Express, TypeScript, PostgreSQL, Prisma, JWT, Redis, Railway | [`templates/node-api.CLAUDE.md`](templates/node-api.CLAUDE.md) |
+| **Rails** | Ruby on Rails 8, PostgreSQL, Devise, Sidekiq, Redis, Render | [`templates/rails.CLAUDE.md`](templates/rails.CLAUDE.md) |
+
+```bash
+# Copy a template into your project
+cp templates/nextjs.CLAUDE.md your-project/CLAUDE.md
+```
+
+Edit the file to match your project's specifics — these are starting points, not rigid configs.
+
+---
+
 ## Roadmap
 
-- [ ] Stack-specific CLAUDE.md templates (Next.js, Rails, Django, Go)
+- [x] Stack-specific CLAUDE.md templates (Next.js, Rails, Node API)
+- [ ] More templates (Django, Go, Laravel)
 - [ ] DevOps Agent — CI/CD, Docker, deployment strategy
 - [ ] Data Agent — analytics instrumentation, KPI tracking
 - [ ] Performance Agent — profiling, optimization, load testing
