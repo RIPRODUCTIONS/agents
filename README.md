@@ -37,6 +37,15 @@ cp -r agents/.claude/commands/* .claude/commands/
 
 ---
 
+## Install as a plugin (one command)
+
+```
+/plugin marketplace add https://github.com/navox-labs/agents
+/plugin install navox@navox-labs
+```
+
+---
+
 ## Run your first build
 
 Open Claude Code in any project folder and run:

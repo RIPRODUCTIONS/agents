@@ -1,0 +1,20 @@
+{
+  "name": "navox-agents-marketplace",
+  "owner": {
+    "name": "Navox Labs",
+    "url": "https://navox.tech"
+  },
+  "plugins": [
+    {
+      "name": "navox",
+      "description": "Specialist AI engineering team — Architect, UX, Full Stack, QA, Security, DevOps with HITL checkpoints",
+      "source": {
+        "source": "github",
+        "repo": "navox-labs/agents"
+      },
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["agents", "engineering", "devtools", "claude-code", "architect", "security", "qa"]
+    }
+  ]
+}
