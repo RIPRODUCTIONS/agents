@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//Users/nahrin/agents/.claude/agents/**)",
+      "Bash(done)",
+      "Bash(wc:*)",
+      "Bash(git reset:*)",
+      "Bash(git stash:*)"
+    ]
+  }
+}
