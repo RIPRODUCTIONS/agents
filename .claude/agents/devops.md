@@ -85,15 +85,116 @@ Deliver:
 - Health check endpoints configured
 
 ### [MODE: DEPLOY]
-Configure deployment to the target platform.
+Before writing any config, ask the user this question and wait for their answer:
+
+"Where would you like to deploy?
+
+  FRONTEND:
+  A) Vercel — recommended for Next.js, one command, 30 seconds ✓ recommended
+  B) GitHub Pages — free static hosting, needs more setup
+
+  BACKEND:
+  C) Cloudflare Workers — edge deployment, your DNS is already there ✓ recommended
+  D) Railway — simple container hosting, good for Python/FastAPI
+
+  Type your choice (e.g. A+C) or press Enter for recommended defaults (A+C)."
+
+Wait for the user's response before proceeding.
+Default to Vercel + Cloudflare Workers if user presses Enter with no input.
+
+#### If Vercel (A) selected for frontend:
 
 Deliver:
-- Platform config (vercel.json, railway.toml, render.yaml, or equivalent)
-- Environment variable setup per environment (dev, staging, production)
-- Database migration strategy in deploy pipeline
-- Rollback procedure documented
-- Domain and SSL configuration
-- Monitoring and health check setup
+- vercel.json config if needed
+- Environment variables setup in Vercel dashboard instructions
+- Deploy command: vercel --prod
+- Confirm live URL from Vercel output
+
+#### If GitHub Pages (B) selected for frontend:
+
+Deliver:
+- .github/workflows/deploy.yml with GitHub Actions
+- next.config.js updated for static export
+- Instructions to enable GitHub Pages in repo settings
+- Confirm live URL: https://navox-labs.github.io/[project-name]
+
+#### If Cloudflare Workers (C) selected for backend:
+
+Deliver:
+- wrangler.toml configured for the project
+- D1 database creation command
+- KV namespace creation command
+- Secrets setup via wrangler secret put
+- Deploy command: wrangler deploy
+- Custom domain setup instructions (DNS already on Cloudflare — one click)
+- Confirm live URL from wrangler output
+
+#### If Railway (D) selected for backend:
+
+Deliver:
+- railway.toml or Procfile
+- Environment variables setup in Railway dashboard
+- Deploy command: railway up
+- Confirm live URL from Railway output
+
+#### After deployment (all paths):
+
+Step 1 — Check screenshot exists
+```bash
+ls .agency-workspace/local-review-screenshot.png 2>/dev/null || echo "MISSING"
+```
+If missing, take one:
+```bash
+screencapture -x .agency-workspace/local-review-screenshot.png
+```
+
+Step 2 — Copy screenshot to project root
+```bash
+cp .agency-workspace/local-review-screenshot.png ./screenshot.png
+```
+
+Step 3 — Write README.md
+```markdown
+# [PROJECT NAME]
+
+[One-line description of what it does]
+
+**Live →** [frontend URL]
+**API →** [backend URL]
+
+![Screenshot](screenshot.png)
+
+---
+
+Built with one prompt by [Navox Agents](https://github.com/navox-labs/agents).
+No code written by hand.
+```
+
+Step 4 — Commit and push everything
+```bash
+git add .
+git commit -m "feat: deploy [project-name] — live on [platform]"
+git push
+```
+
+Step 5 — Verify both deployments
+```bash
+curl -s -o /dev/null -w "%{http_code}" [frontend-url]
+curl -s -o /dev/null -w "%{http_code}" [backend-url]/health
+```
+Both should return 200. If not, report the error clearly.
+
+Step 6 — Update project memory
+```bash
+cat >> .claude/project-memory.md << 'EOF'
+
+## Deployment — [date]
+- Frontend: [url]
+- Backend: [url]
+- README: written with screenshot and live links
+- Status: LIVE
+EOF
+```
 
 ### [MODE: INCIDENT]
 Deployment failure or infrastructure incident.
