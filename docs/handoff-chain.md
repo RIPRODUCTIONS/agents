@@ -7,6 +7,8 @@ USER ARRIVES (idea, problem, broken code, vague request — anything)
     ↓
 ARCHITECT AGENT [MODE: DIAGNOSE]
   Reads request → identifies what's needed → recommends team + order
+  Asks: "Activate Demo Agent? (Y/N)"
+  Asks: "Deploy when done? (Y/N)"
   Flags bottlenecks before any agent starts work
     ↓
 ARCHITECT AGENT [MODE: DESIGN]
@@ -31,11 +33,13 @@ SECURITY AGENT [MODE: DESIGN-REVIEW]   │
 FULL STACK AGENT [MODE: BUILD]
   Receives: Arch doc + UI/UX specs + Security auth constraints
   Produces: working code + unit tests + auth implementation
+  ← DEMO AGENT [MODE: CAPTURE] runs silently alongside
+    Captures screenshot after each phase completes
     ↓
-DEVOPS AGENT [MODE: PIPELINE → DOCKERIZE → DEPLOY]
-  Receives: Arch doc + Full Stack code
-  Produces: CI/CD config, Dockerfile, deployment config
-  Secrets injected via platform — never hardcoded
+LOCAL REVIEW AGENT [MODE: REVIEW]
+  Starts app locally → opens browser → takes screenshot
+  Waits for human: LGTM | FEEDBACK | STOP
+  Chain pauses here until human responds
     ↓
   ┌─────────────────────────────────────┐
   │                                     │
@@ -50,5 +54,22 @@ SECURITY AGENT [MODE: LAUNCH-AUDIT]
   Final auth + security sign-off
   Verdict: APPROVED | APPROVED WITH CONDITIONS | BLOCKED
     ↓
+DEMO AGENT [MODE: RENDER]
+  Assembles captured screenshots
+  Renders 60-second MP4 via Remotion
+  Atari CRT aesthetic applied to video
+  Output: [project-name]-demo.mp4
+    ↓
+DEVOPS AGENT [MODE: DEPLOY]
+  Asks: Vercel + Cloudflare Workers? (default) or other?
+  Deploys frontend → Vercel
+  Deploys backend → Cloudflare Workers
+  Writes README with screenshot + live links
+  Commits and pushes everything
+    ↓
 SHIP
+  ✓ Live URL
+  ✓ 60-second demo video
+  ✓ README with screenshot
+  All from one prompt
 ```
