@@ -24,9 +24,10 @@
 **Global** — available in every project:
 ```bash
 git clone https://github.com/navox-labs/agents.git
+mkdir -p ~/.claude/agents ~/.claude/commands ~/.claude/templates
 cp -r agents/.claude/agents/* ~/.claude/agents/
 cp -r agents/.claude/commands/* ~/.claude/commands/
-cp -r agents/templates ~/.claude/templates
+cp -r agents/templates/* ~/.claude/templates/
 ```
 
 **Project only:**
@@ -146,7 +147,6 @@ flowchart TD
 | 🧪 | **QA** | Finds every bug. Auth flows get extra scrutiny. |
 | 🔐 | **Security** | Audits everything. Nothing launches without a verdict. |
 | 🎬 | **Demo** | Captures screenshots during build. Renders 60-second demo video. |
-| 🎥 | **DevOps** | Deploys to Vercel + Cloudflare Workers. Writes README. Ships live. |
 
 Use one agent directly: `architect DIAGNOSE`, `security LAUNCH-AUDIT`, `qa PLAN`
 

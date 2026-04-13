@@ -1,6 +1,6 @@
 {
   "name": "navox-agents",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Specialist AI engineering team for Claude Code. 8 agents with HITL checkpoints and /agency-run orchestrator.",
   "author": {
     "name": "Navox Labs",
@@ -10,5 +10,6 @@
   "repository": "https://github.com/navox-labs/agents",
   "license": "MIT",
   "keywords": ["agents", "engineering", "devtools", "claude-code"],
-  "agents": ".claude/agents/"
+  "agents": ".claude/agents/",
+  "commands": [".claude/commands/hire-team.md", ".claude/commands/agency-run.md"]
 }
