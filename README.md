@@ -47,8 +47,11 @@ git config --global url."https://github.com/".insteadOf "git@github.com:"
 Then install:
 ```
 /plugin marketplace add https://github.com/navox-labs/agents
-/plugin install navox@navox-labs
+/plugin install navox-agents
+/reload-plugins
 ```
+
+> **Note:** Plugin commands are namespaced. Use `/navox-agents:agency-run` and `/navox-agents:hire-team` instead of `/agency-run` and `/hire-team`. If you installed via the global/project copy method above, no namespace is needed.
 
 ---
 
@@ -56,8 +59,17 @@ Then install:
 
 Open Claude Code in any project folder and run:
 
+**If you installed globally (copy method):**
 ```
 /agency-run Build a {browser-based} {Cookie Clicker game}
+with {Atari pixel art} vibes where {crabs eat cookies}.
+No authentication. No backend. Single HTML file,
+runs in any browser. Make it {addictive} and {funny}.
+```
+
+**If you installed as a plugin:**
+```
+/navox-agents:agency-run Build a {browser-based} {Cookie Clicker game}
 with {Atari pixel art} vibes where {crabs eat cookies}.
 No authentication. No backend. Single HTML file,
 runs in any browser. Make it {addictive} and {funny}.
@@ -148,7 +160,8 @@ flowchart TD
 | 🔐 | **Security** | Audits everything. Nothing launches without a verdict. |
 | 🎬 | **Demo** | Captures screenshots during build. Renders 60-second demo video. |
 
-Use one agent directly: `architect DIAGNOSE`, `security LAUNCH-AUDIT`, `qa PLAN`
+Use one agent directly: `/architect DIAGNOSE`, `/security LAUNCH-AUDIT`, `/qa PLAN`
+(Plugin users: prefix with `navox-agents:` e.g. `/navox-agents:architect DIAGNOSE`)
 
 ---
 

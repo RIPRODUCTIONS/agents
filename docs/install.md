@@ -52,10 +52,15 @@ git config --global url."https://github.com/".insteadOf "git@github.com:"
 Then install:
 ```
 /plugin marketplace add https://github.com/navox-labs/agents
-/plugin install navox@navox-labs
+/plugin install navox-agents
+/reload-plugins
 ```
 
+> **Note:** Plugin commands are namespaced. Use `/navox-agents:agency-run` and `/navox-agents:hire-team` instead of `/agency-run` and `/hire-team`.
+
 ## Verification
+
+### Global/Project install
 
 After installing, verify the agents are loaded:
 
@@ -72,6 +77,13 @@ Then open Claude Code and run:
 - `/hire-team` — should display the full team overview
 - `/agency-run` — should prompt you for a task and orchestrate the team
 - `/architect DIAGNOSE` — should activate the Architect agent
+
+### Plugin install
+
+Open Claude Code and run:
+- `/navox-agents:hire-team` — should display the full team overview
+- `/navox-agents:agency-run` — should prompt you for a task and orchestrate the team
+- `/navox-agents:architect DIAGNOSE` — should activate the Architect agent
 
 ## Uninstall
 
@@ -103,4 +115,10 @@ rm .claude/agents/qa.md
 rm .claude/agents/security.md
 rm .claude/commands/hire-team.md
 rm .claude/commands/agency-run.md
+```
+
+### Plugin uninstall
+```
+/plugin uninstall navox-agents
+/reload-plugins
 ```
