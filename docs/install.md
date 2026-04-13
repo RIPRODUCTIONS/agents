@@ -67,7 +67,7 @@ After installing, verify the agents are loaded:
 ```bash
 # Check agent files are in place
 ls ~/.claude/agents/
-# Expected: architect.md  demo.md  devops.md  fullstack.md  installer.md  local-review.md  qa.md  security.md  ux.md
+# Expected: architect.md  devops.md  fullstack.md  installer.md  local-review.md  qa.md  security.md  ux.md
 
 ls ~/.claude/commands/
 # Expected: agency-run.md  hire-team.md
@@ -90,7 +90,6 @@ Open Claude Code and run:
 ### Global uninstall
 ```bash
 rm ~/.claude/agents/architect.md
-rm ~/.claude/agents/demo.md
 rm ~/.claude/agents/devops.md
 rm ~/.claude/agents/fullstack.md
 rm ~/.claude/agents/installer.md
@@ -105,7 +104,6 @@ rm ~/.claude/commands/agency-run.md
 ### Project uninstall
 ```bash
 rm .claude/agents/architect.md
-rm .claude/agents/demo.md
 rm .claude/agents/devops.md
 rm .claude/agents/fullstack.md
 rm .claude/agents/installer.md

@@ -1,7 +1,7 @@
 # Navox Agents
 
 > A specialist AI engineering team for Claude Code.
-> 8 agents. No platform. No login. Your code never leaves your machine.
+> 7 agents. No platform. No login. Your code never leaves your machine.
 
 [![GitHub stars](https://img.shields.io/github/stars/navox-labs/agents?style=social)](https://github.com/navox-labs/agents)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -116,10 +116,6 @@ flowchart TD
     FS1["⚙️ Full Stack · Sonnet 4.6\nBUILD\ncode + auth implementation + unit tests"]
 
     FS1 -->|working code + tests| CP
-    FS1 -->|build in progress| DEMO
-    DEMO["🎬 Demo · Sonnet 4.6\nCAPTURE\nscreenshots each phase · builds manifest"]
-    DEMO -->|manifest ready| CP
-
     CP{{"⚠️ Checkpoint\napp running locally · LGTM / FEEDBACK / STOP"}}
 
     CP -->|code to test| QA
@@ -140,7 +136,7 @@ flowchart TD
     G3{{"⚠️ Gate 3\nSecurity LAUNCH-AUDIT · verdict"}}
 
     G3 -->|APPROVED ✓| DEVOPS
-    DEVOPS["🚀 DevOps · Sonnet 4.6\nDEPLOY\nVercel + Cloudflare · README written · video rendered"]
+    DEVOPS["🚀 DevOps · Sonnet 4.6\nDEPLOY\nVercel + Cloudflare · README written"]
     DEVOPS -->|live URL + video| SHIP
 
     SHIP["🚀 SHIP"]
@@ -158,7 +154,6 @@ flowchart TD
 | 🚀 | **DevOps** | CI/CD. Docker. Deploys. Secrets never touch code. |
 | 🧪 | **QA** | Finds every bug. Auth flows get extra scrutiny. |
 | 🔐 | **Security** | Audits everything. Nothing launches without a verdict. |
-| 🎬 | **Demo** | Captures screenshots during build. Renders 60-second demo video. |
 
 Use one agent directly: `/architect DIAGNOSE`, `/security LAUNCH-AUDIT`, `/qa PLAN`
 (Plugin users: prefix with `navox-agents:` e.g. `/navox-agents:architect DIAGNOSE`)

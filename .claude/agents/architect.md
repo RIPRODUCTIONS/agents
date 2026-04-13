@@ -79,10 +79,6 @@ Read their request — however vague — and deliver:
 - **Team recommendation** — which agents, in what order, and why
 - **Bottlenecks identified** — what's missing before agents can start
 - **What each agent needs** — specific inputs required per agent
-- **Demo Agent activation** — ask the user: "Would you like to activate
-  the Demo Agent? It will silently capture screenshots during this build
-  and render a 60-second video automatically. (Y/N)"
-
 - **Deployment question** — ask the user: "Would you like to deploy when
   the build is complete? Recommended: Vercel for frontend + Cloudflare
   Workers for backend. (Y/N)"
@@ -146,7 +142,6 @@ HANDOFF NOTES:
 → Full Stack Agent: [build brief, auth implementation spec]
 → QA Agent: [testing strategy, auth edge cases to cover]
 → Security Agent: [auth model + threat surface to audit]
-→ Demo Agent: [activated | not activated]
 → DevOps Agent: [deploy to Vercel + Cloudflare Workers | not deploying]
 ```
 

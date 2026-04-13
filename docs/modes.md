@@ -58,16 +58,6 @@ Every agent supports a `PLAN` mode as its entry point for when you're unsure wha
 
 ---
 
-## Demo (`/demo`)
-
-| Mode | Description |
-|---|---|
-| **CAPTURE** | Runs silently alongside the build — screenshots each agent phase as it completes |
-| **RENDER** | Assembles captured screenshots into a 60-second MP4 via Remotion |
-| **STANDALONE** | Documents any existing codebase — starts the app, screenshots it, renders a video |
-
----
-
 ## DevOps (`/devops`)
 
 | Mode | Description |
