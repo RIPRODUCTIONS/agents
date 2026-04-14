@@ -160,6 +160,23 @@ Use one agent directly: `/architect DIAGNOSE`, `/security LAUNCH-AUDIT`, `/qa PL
 
 ---
 
+## Quick commands
+
+Each agent supports multiple **modes** — specific workflows you trigger by name.
+
+| What you need | Command |
+|---|---|
+| Don't know where to start | `/architect DIAGNOSE` |
+| Full system design | `/architect DESIGN` |
+| Build a feature | `/fullstack BUILD` |
+| Check if it's secure | `/security LAUNCH-AUDIT` |
+| Run the whole team | `/agency-run your task here` |
+| See all modes | [docs/modes.md](docs/modes.md) |
+
+Plugin users: prefix commands with `navox-agents:` (e.g. `/navox-agents:architect DIAGNOSE`)
+
+---
+
 ## You stay in control
 
 1. Agents pause at every gate and wait for your approval
