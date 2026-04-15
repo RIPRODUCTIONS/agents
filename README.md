@@ -6,16 +6,20 @@
 [![GitHub stars](https://img.shields.io/github/stars/navox-labs/agents?style=social)](https://github.com/navox-labs/agents)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Built for Claude Code](https://img.shields.io/badge/Built_for-Claude_Code-blueviolet)](https://claude.ai)
-![navox-agents](https://github.com/user-attachments/assets/9fa925d1-43e0-4a53-9272-57e53d9d373f)
+<img width="2752" height="1536" alt="Game Poster Merge" src="https://github.com/user-attachments/assets/d0bcd837-7438-4267-86f6-75a1810b56f9" />
+
 
 ---
 
-## See it work first
+## See it work
 
-> We gave the agents one prompt.
-> 7 minutes later: a playable crab cookie clicker game.
-> 1,330 lines. Zero dependencies. 6 bugs caught by QA.
-> [🦀 Play nom.sh →](https://github.com/navox-labs/nom)
+**nom.sh — one prompt, 7 minutes:**
+> 🦀 A crab cookie clicker. 1,330 lines. 6 bugs caught by QA.
+> [See the code →](https://github.com/navox-labs/nom)
+
+**PipeWar — built, debugged, and deployed by agents:**
+> 🛡️ A Factorio-inspired tower defense game. Built from scratch, 8 production bugs diagnosed and fixed, 65 tests passing. All by the agent team.
+> [Play PipeWar →](https://frontend-beta-five-83.vercel.app) · [See the code →](https://github.com/navox-labs/pipewar)
 
 ---
 
